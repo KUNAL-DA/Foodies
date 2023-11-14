@@ -1,0 +1,246 @@
+/* 
+===============================
+Responsiveness For Galexcy Fold
+===============================
+*/
+@media(max-width: 280px){
+
+    html{
+        size: 70%;
+    }
+}
+
+/* 
+===============================
+Responsiveness For Big screen
+===============================
+*/
+@media(max-width: 1400px){
+
+    #Cart-section{
+        position: fixed;
+        top: 6rem;
+        left: 35rem;
+        width: 50%;
+        height: 10%;
+        background: #ffffffff;
+        scroll-behavior: smooth; 
+    }
+}
+/* 
+===============================
+Responsiveness For midium screen
+===============================
+*/
+@media(max-width: 1215px){
+
+  .fa-heart{
+       font-size: 0.2rem;
+  } 
+    }
+
+/* 
+===============================
+Responsiveness For midium Dekstop
+===============================
+*/
+@media(max-width: 1199px){
+    #Cart-section{
+        position: fixed;
+        top: 6rem;
+        left: 30rem;
+        width: 50%;
+        height: 10%;
+        background: #ffffffff;
+        scroll-behavior: smooth; 
+    }   
+}
+/* 
+===============================
+Responsiveness For small Dekstop
+===============================
+*/
+@media(max-width: 1030px){
+
+}
+/* 
+===============================
+Responsiveness For IPAD
+===============================
+*/
+@media(max-width: 991px){
+
+    /* Custom Classes */
+    .text-content{
+        width: 100%;
+    }
+
+    /* Navbar Brand  */
+    .navigation-wrap .navbar-brand img{
+        height: 3.8125rem;
+    }
+
+    .navigation-wrap{
+        text-align: center;
+        background-color: var(--white-color);
+    }
+
+    .navigation-wrap .nav-link{
+        line-height: 1.875rem;
+    }
+
+    /* Banner Design  */
+    .top-banner{
+        padding: 9.375rem 0 9.375rem;
+    }
+
+    /* Carousel Section Styling  */
+    .testimonial-section .carousel-item .carousel-caption p{
+        padding: 0;
+    }
+
+   /* cart styling  */
+    .center_class{
+        width: 50%;
+        display: flex;
+        justify-content: center; 
+       
+    }
+    
+    .padding-stop{
+        margin-bottom: 0.8rem;
+    }
+    .padding-stops{
+        margin-bottom: 0rem;
+    }  
+}
+/* 
+===============================
+Responsiveness For All Tabs and pads
+===============================
+*/
+@media(max-width: 767px){
+
+    /* custom css  */
+    h1{
+        font-size: 2.4rem;
+    }
+
+    h2{
+        font-size: 2rem;
+        line-height: 2.0625rem;
+    }
+
+    /* top banner  */
+    .top-banner{
+        padding: 10.875rem 0 9.375rem;
+    }
+
+    /* Story Section  */
+    .story-section{
+        height: auto;
+        padding: 3rem 0;
+    }
+}
+/* 
+===============================
+Carousel Section Styling
+===============================
+*/
+.testimonial-section .carousel-item {
+    padding: 10rem 3.125rem;
+  }
+
+.testimonial-section .carousel-item .carousel-caption p{
+        padding-top: 11rem 3.125rem ;
+        font-size: 1rem;
+    }
+
+    /* Newsletter Sections  */
+
+    .newaletter{
+        width: 75%;
+        margin-bottom: 1rem;
+    }
+
+    
+    .newaletter .main-btn{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* Footer Styling  */
+
+    .footer .footer-stuff,
+    .footer a i{
+        padding: 0 0.7rem;
+    }
+
+/* 
+=======================================
+Responsiveness For tabs and big phone
+=======================================
+*/
+
+    @media(max-width: 632px){
+      
+        #our_product{
+            align-items: center;
+        }
+
+        .center_class{
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+           
+        }
+    }
+
+/* 
+===================================
+Responsiveness For Middium Mobile
+===================================
+ */
+@media(max-width: 490px){
+    .testimonial-section .carousel-item {
+        padding: 13rem 3.125rem;
+      }
+      .cart-item {
+        display: flex;
+        align-items: center;
+      }
+    
+     
+}
+
+@media(max-width: 334px){
+    .footer .footer-link{
+        display: inline;
+        font-size: 0.7rem;
+        color: var(--white-color);
+        padding: 0 0.7rem;
+    }
+    .footer a i{
+        font-size: 1.1rem;
+    }
+}
+
+/* 
+==============================
+Responsiveness For small Mobile
+==============================
+ */
+@media(max-width: 330px){
+/* Carousel Section Styling  */
+    .testimonial-section .carousel-item {
+      padding: 13rem 3.125rem;
+    }
+
+    .testimonial-section .carousel-item .carousel-caption p{
+        padding-top: 0rem ;
+        font-size: 0.7rem;
+    }
+}
+
+

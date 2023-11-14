@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodies/App/Kitchen/.in</title>
+
+   <!-- Bootstrap css  -->
+    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css">
+
+     <!-- Own Css Link  -->
+    <link rel="stylesheet" href="../StyleSheets/style.css">
+    <link rel="stylesheet" href="../StyleSheets/responsive.css">
+    
+   <!-- font awsome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/icon" href="../Images/logo.png">
+</head>
+<body>
+
+    <!-- Navbar Section  -->
+<header>
+    <nav class="navbar navbar-expand-lg navigation-wrap" id="nav-menu">
+        <div class="container">
+        <a class="navbar-brand" href="#"><img src="../Images/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <i class=" fas fa-strem navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          
+            <li class="nav-item" onclick="Cartitems()">
+              <a class="nav-link add_to_cart">
+                <i class="fa-solid fa-cart-shopping"></i>Cart - 
+                 <span id="cart_status">0</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#newsletter">Subscribe Us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Return-to-homepage</a>
+              </li>
+             <li><button id="number" class="main-btn">24/7 Customer Care</button></li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+
+
+
+ <div id="cart" class="text-center ca_rt"><span class="cro_ss"><i class="fa-solid fa-xmark"></i></span>
+  <img src="../Images/logo.png" alt="Logo" height="10%" width="40%" class="img-fluid mb-4 d-flex align-baseline">
+  <div class="status"></div><hr>
+  
+  <div id="cartItems"></div>
+  <div id="totalPrice"><span style="color: red;">Total: $0.00</span></div>
+  <a href="#" id="Checkout_btn" class="main-btn py-0 my-3">CheckOut</a><br>
+  <label>Delivery + VAT Changes : $ 10.00</label>
+</div> <!-- Cart section end -->
+</header>
+
+<!-- Section-1 top banner  -->
+
+<section id="Cart-Home">
+  <div class="container-fluid px-0 top-banner3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <h1>Good Food Choices are good investment</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Beatae autem quo facere adipisci eius. Autem necessitatibus temporibus neque.</p>
+             <div class="mt-4">
+              <a href="#our_product"><button class="main-btn">Visit Food Section<i class="fa-solid fa-eye ps-3"></i></button></a>
+              <button class="white-btn ms-lg-7 mt-lg-4 mt-4 Big_button " onclick="checkOut()">Easy CheckOut <i class="fas fa-angle-right ps-3"></i></button>
+             </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--  Section-2 Food Heading  -->
+<section id="explore-food">
+  <div class="explore-food wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-content text-center">
+            <h2><span style="color: rgb(255, 136, 0);">Take a Look</span> <span style="color: brown;">To Our</span><span style="color: rgb(255, 136, 0);"> Menu Section</span> </h2>
+            <p style="color: #636363;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic eos totam praesentium 
+              aperiam tenetur, velit vitae a asperiores itaque doloribus deleniti labore aut eius
+               obcaecati explicabo, deserunt maiores nihil veritatis quasi maxime laborum possimus 
+               saepe mollitia? Ducimus ut qui, doloribus porro facere sunt nesciunt dicta id, deserunt 
+               laboriosam at, dolores autem quia vel voluptas repudiandae libero nostrum quo officiis?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  Sections -3 Product-->
+
+
+    <!-- 1st section start -->
+    <section id="our_product" class="container mx-auto">
+    <div class="container mt-1">
+      <div class="row">
+          <div class="col-md-3 center_class">
+              <div class="product-card container ">
+                  <img src="../Images/order-images/white-sors-pasta-1.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>White sos pasta</h6>
+                  <p>$11.99</p>
+                  <p>Deleivery : + $10</p>
+                  <button class=" py-0 main-btn" onclick=" addMessage(),addToCart('./burger.jpg', 'White sos pasta', 11.99)">Add to Cart</button>
+              </div>
+          </div>
+          <div class="col-md-3 center_class">
+              <div class="product-card container ">
+                  <img src="../Images/order-images/chawomin-2.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6> Chiken Chawomin</h6>
+                  <p>$14.99</p>
+                  <p>Deleivery : + $10</p>
+                  <button class="main-btn py-0 " onclick="addMessage(),addToCart('./product2.jpg', 'Chiken Chawomin', 14.99)">Add to Cart</button>
+              </div>
+          </div>
+          <div class="col-md-3 center_class">
+              <div class="product-card container ">
+                  <img src="../Images/order-images/shrimp-3.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Fried Shrimp</h6>
+                  <p>$15.99</p>
+                  <p>Deleivery : + $10</p>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart('product3.jpg', 'Fried Shrimp', 15.99)">Add to Cart</button>
+              </div>
+          </div>
+          <div class="col-md-3 center_class">
+              <div class="product-card container ">
+                  <img src="../Images/order-images/spacial-fried-rice-4.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Fried Rice</h6>
+                  <p>$14.99</p>
+                  <p>Deleivery : + $10</p>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart('product4.jpg', 'Chicken wings', 14.99)">Add to Cart</button>
+              </div>
+          </div>
+      </div>
+  </div> <!-- 1st section end -->
+  
+  
+  <!-- 2nd section start -->
+  <div class="container mt-5">
+      <div class="row">
+          <div class="col-md-3 center_class">
+              <div class="product-card container">
+                  <img src="../Images/order-images/chawomin-5.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Veg Chawomin</h6>
+                  <p>$9.32</p>
+                  <p>Deleivery : + $10</p>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart('./burger.jpg', 'Veg Chawomin', 9.32)">Add to Cart</button>
+              </div>
+          </div>
+          <div class="col-md-3 center_class">
+              <div class="product-card container">
+                  <img src="../Images/order-images/chicken-6.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Full Chicken</h6>
+                  <p>$24.99</p>
+                  <p>Deleivery : + $10</p>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart('./product2.jpg', 'Full Chicken', 24.99)">Add to Cart</button>
+              </div>
+          </div>
+          <div class="col-md-3 center_class">
+              <div class="product-card container">
+                  <img src="../Images/order-images/burger-7.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Chicken Burger</h6>
+                  <p>$9.99</p>
+                  <p>Deleivery : + $10</p>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart('product3.jpg', 'Chicken Burger', 9.99)">Add to Cart</button>
+              </div>
+          </div>
+          <div class="col-md-3 center_class">
+              <div class="product-card container">
+                  <img src="../Images/order-images/pizza-8.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Gresse Chise Pizza</h6>
+                  <p>$17.00</p>
+                  <p>Deleivery : + $10</p>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart('product4.jpg', 'Gresse Chise Pizza', 17.00)">Add to Cart</button>
+              </div>
+          </div>
+      </div>
+  </div> <!-- 2nd section end -->
+  
+  <!-- 3rd section start -->
+  <div class="container mt-5">
+      <div class="row">
+          <div class="col-md-3 center_class">
+              <div class="product-card container">
+                  <img src="../Images/order-images/momos-9.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Veg Momo</h6>
+                  <p>$5.99</p>
+                  <p>Deleivery : + $10</p>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart('./burger.jpg', 'Veg Momo', 5.99)">Add to Cart</button>
+              </div>
+          </div>
+          <div class="col-md-3 center_class">
+              <div class="product-card container">
+                  <img src="../Images/order-images/cheesesteak sandwich-13.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Cheesesteak Sandwich</h6>
+                  <p class="padding-stops">$25.00</p>
+                  <p class="padding-stop">Deleivery : + $10</p>
+                  <button class="main-btn py-0 " onclick="addMessage(),addToCart('./product2.jpg', 'Cheesesteak Sandwich', 25.00)">Add to Cart</button>
+              </div>
+          </div>
+          <div class="col-md-3 center_class">
+              <div class="product-card container md-w-25">
+                  <img src="../Images/order-images/biriyani-10.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Chicken Biriyani</h6>
+                  <p>$20.00</p>
+                  <p>Deleivery : + $10</p>
+                  <button class=" main-btn py-0 " onclick="addMessage(),addToCart('product3.jpg', 'Chicken Biriyani', 20.00)">Add to Cart</button>
+              </div>
+          </div>
+          <div class="col-md-3 center_class">
+              <div class="product-card container md-w-25">
+                  <img src="../Images/order-images/bacon-burger-11.jpg" alt="Product 4" width="100%" height="100%">
+                  <h6>Bacon Burger</h6>
+                  <p>$10.00</p>
+                  <p>Deleivery : + $10</p>
+                  <button class="main-btn py-0 " onclick="addMessage(),addToCart('product4.jpg', 'Bacon Burger', 10.00)">Add to Cart</button>
+            </div>
+          </div>
+      </div>
+  </div>
+</section><!-- 3rd section end -->
+
+<!-- Section-4 NewsLetter  -->
+
+<section id="newsletter">
+  <div class="newsletter wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-content text-center pb-4">
+            <h2><span style="color: #f98169;">Hurry up! </span>Subscribe 
+              and <span style="color: #f98169;"> get 20% off </span>in your next order.</h2>
+              <p>Limited time offer for this month. No credit card requred.</p>
+          </div>
+          <form action="#" class="newsletter">
+            <div class="row">
+              <div class="col-md-8 col-12 mb-4">
+                <input type="text" class="form-control" placeholder="Enter Your Email Here" name="email" required>
+              </div>
+              <div class="col-md-4 col-12">
+                <button class="main-btn" type="submit">Subscribe</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  Section-5 Footer-->
+
+<footer id="footer">
+  <div class="footer py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <a class="footer-link" href="#">Register</a>
+          <a class="footer-link" href="#">Forum</a>
+          <a class="footer-link" href="#">Affiliate</a>
+          <a class="footer-link" href="#">FAQ</a>
+          <div class="footer-social pt-4 text-center">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-google-play"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="col-sm-12">
+          <div class="footer-copy">
+            <div class="copy-right text-center pt-5">
+              <p class="text-light"> © 2023. Foodies. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>          
+</footer>
+
+<script src="../MyJavaScript/add-to-cart.js"></script>
+<script src="../bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
