@@ -19,6 +19,7 @@ number.onclick = function(){
     setTimeout(() => {
         number.innerText = "Copied";
     }, 1200);
+    navCollapse.classList.remove('show');
 }
  number.onmouseover = function(){
         setTimeout(() => {
@@ -35,8 +36,6 @@ let cart_status = document.getElementById('cart_status');
 let cartItem = document.querySelector('.ca_rt');
 let cro_ss = document.querySelector('.cro_ss');
 let message = document.getElementById('message');
-
-
 function Cartitems(){
      cartItem.classList.toggle('active');
      cro_ss.onclick = function(){
@@ -54,8 +53,7 @@ let totalPrice = 0;
  document.querySelector('.status').innerHTML = "Your Cart Is Empty";
    
 // Main function starts
-function addToCart(image, name, price) {
-    
+function addToCart( image, name, price) {
     // Increment quantity
     cartQuantity++;
 
@@ -64,34 +62,30 @@ function addToCart(image, name, price) {
 
     // Update cart quantity display
     document.getElementById('cart_status').innerText = cartQuantity;
-
-    // Create a new element for the cart item
+    document.getElementById('cart_count').innerText = cartQuantity;
+       // Create a new element for the cart item
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
-    cartItem.innerHTML = `
+    cartItem.innerHTML =`
+    <img src="${image}" width ="80px" class = "image_pro">
         <div id = "name_pro">${name}</div>
         <div id = "price_pro">$${price.toFixed(2)}</div>
         <button class="btn btn-danger btn-sm" onclick="removeFromCart(this, ${price})">Remove</button>
     `;
-   
     // Append the cart item to the cart
     document.getElementById('cartItems').appendChild(cartItem);
 
     // Update total price
     totalPrice += price;
     document.getElementById('totalPrice').innerText = `Total: $${(totalPrice).toFixed(2)}`;
-   
 
 }
+
 function removeFromCart(button, price) {
     // Decrement quantity
+    let userAns = confirm("Do You Really Want To Remove This Item?");
+    if(userAns == true){
     cartQuantity--;
-
-    if(cartQuantity == 0){
-        document.querySelector('.status').innerHTML = "Your Cart Is Empty";
-        
-    }
-    confirm("Do You Really Want To Remove This Item?");
 
     var successMessageElement = document.createElement(`div`);
     successMessageElement.innerHTML = "Item Has Been Removed Succesfully ✓";
@@ -114,6 +108,7 @@ function removeFromCart(button, price) {
 
     // Update cart quantity display
     document.getElementById('cart_status').innerText = cartQuantity;
+    document.getElementById('cart_count').innerText = cartQuantity;
 
     // Remove the cart item
     const cartItem = button.parentElement;
@@ -122,8 +117,28 @@ function removeFromCart(button, price) {
     // Update total price
     totalPrice -= price;
     document.getElementById('totalPrice').innerText = `Total: $${(totalPrice).toFixed(2)}`;
+    }else{
+        var elseStatus = document.createElement(`div`);
+        elseStatus.innerHTML = "Get 20% off in your first order";
+        elseStatus.style.color = "#000";
+        elseStatus.style.fontWeight = "700";
+        elseStatus.style.background = "#eee";
+        elseStatus.style.padding = "1rem";
+        elseStatus.style.position = "fixed";
+        elseStatus.style.top = "25%";
+        elseStatus.style.left = "50%";
+        elseStatus.style.transform = "translate(-50%, -50%)";
+    }
+    // document.body.appendChild(elseStatus);
 
-    
+    // setTimeout(function() {
+    //     document.body.removeChild(elseStatus);
+    //   }, 1000);
+
+    if(cartQuantity == 0){
+        document.querySelector('.status').innerHTML = "Your Cart Is Empty";
+        
+    }
 }
 
  function addMessage () {

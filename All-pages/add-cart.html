@@ -51,11 +51,13 @@
 
  <div id="cart" class="text-center ca_rt"><span class="cro_ss"><i class="fa-solid fa-xmark"></i></span>
   <img src="../Images/logo.png" alt="Logo" height="10%" width="40%" class="img-fluid mb-4 d-flex align-baseline">
+  <i class="fa-solid fa-cart-shopping"></i> Total Item - 
+                 <span id="cart_count">0</span></a>
   <div class="status"></div><hr>
   
   <div id="cartItems"></div>
   <div id="totalPrice"><span style="color: red;">Total: $0.00</span></div>
-  <a href="#" id="Checkout_btn" class="main-btn py-0 my-3">CheckOut</a><br>
+  <a href="#" id="Checkout_btn" class="main-btn py-0 my-3">CheckOut</a><br><br>
   <label>Delivery + VAT Changes : $ 10.00</label>
 </div> <!-- Cart section end -->
 </header>
@@ -72,7 +74,7 @@
              Beatae autem quo facere adipisci eius. Autem necessitatibus temporibus neque.</p>
              <div class="mt-4">
               <a href="#our_product"><button class="main-btn">Visit Food Section<i class="fa-solid fa-eye ps-3"></i></button></a>
-              <button class="white-btn ms-lg-7 mt-lg-4 mt-4 Big_button " onclick="checkOut()">Easy CheckOut <i class="fas fa-angle-right ps-3"></i></button>
+              <button class="white-btn ms-lg-7 mt-lg-4 mt-4 Big_button " onclick="Cartitems()">Easy CheckOut <i class="fas fa-angle-right ps-3"></i></button>
              </div>
         </div>
       </div>
@@ -108,39 +110,63 @@
     <div class="container mt-1">
       <div class="row">
           <div class="col-md-3 center_class">
-              <div class="product-card container ">
+              <div class="product-card container" data-product-id="1">
                   <img src="../Images/order-images/white-sors-pasta-1.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>White sos pasta</h6>
-                  <p>$11.99</p>
-                  <p>Deleivery : + $10</p>
-                  <button class=" py-0 main-btn" onclick=" addMessage(),addToCart('./burger.jpg', 'White sos pasta', 11.99)">Add to Cart</button>
+                  <h6 class="product-name">White sos pasta</h6>
+                  <p class="product-price">$11.99</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                  </div>
+                  <button class=" py-0 main-btn" onclick=" addMessage(),addToCart('../Images/order-images/white-sors-pasta-1.jpg', 'White sos pasta', 11.99, 1)">Add to Cart</button>
               </div>
           </div>
           <div class="col-md-3 center_class">
-              <div class="product-card container ">
+              <div class="product-card container" data-product-id="2">
                   <img src="../Images/order-images/chawomin-2.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6> Chiken Chawomin</h6>
-                  <p>$14.99</p>
-                  <p>Deleivery : + $10</p>
-                  <button class="main-btn py-0 " onclick="addMessage(),addToCart('./product2.jpg', 'Chiken Chawomin', 14.99)">Add to Cart</button>
+                  <h6 class="product-name"> Chiken Chowomien</h6>
+                  <p class="product-price">$14.99</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">✬</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                  </div>
+                  <button class="main-btn py-0 " onclick="addMessage(),addToCart( '../Images/order-images/chawomin-2.jpg', 'Chiken Chawomin', 14.99 , 2)">Add to Cart</button>
               </div>
           </div>
           <div class="col-md-3 center_class">
-              <div class="product-card container ">
+              <div class="product-card container" data-product-id="3">
                   <img src="../Images/order-images/shrimp-3.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Fried Shrimp</h6>
-                  <p>$15.99</p>
-                  <p>Deleivery : + $10</p>
-                  <button class="main-btn py-0" onclick="addMessage(),addToCart('product3.jpg', 'Fried Shrimp', 15.99)">Add to Cart</button>
+                  <h6 class="product-name">Fried Shrimp</h6>
+                  <p class="product-price">$15.99</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">✬</i>
+                  </div>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart( '../Images/order-images/shrimp-3.jpg', 'Fried Shrimp', 15.99, 3)">Add to Cart</button>
               </div>
           </div>
           <div class="col-md-3 center_class">
-              <div class="product-card container ">
+              <div class="product-card container" data-product-id="4">
                   <img src="../Images/order-images/spacial-fried-rice-4.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Fried Rice</h6>
-                  <p>$14.99</p>
-                  <p>Deleivery : + $10</p>
-                  <button class="main-btn py-0" onclick="addMessage(),addToCart('product4.jpg', 'Chicken wings', 14.99)">Add to Cart</button>
+                  <h6 class="product-name">Fried Rice</h6>
+                  <p class="product-price">$14.99</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                  </div>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart('../Images/order-images/spacial-fried-rice-4.jpg', 'Fried Rice', 14.99, 4)">Add to Cart</button>
               </div>
           </div>
       </div>
@@ -151,39 +177,63 @@
   <div class="container mt-5">
       <div class="row">
           <div class="col-md-3 center_class">
-              <div class="product-card container">
+              <div class="product-card container" data-product-id="5">
                   <img src="../Images/order-images/chawomin-5.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Veg Chawomin</h6>
-                  <p>$9.32</p>
-                  <p>Deleivery : + $10</p>
-                  <button class="main-btn py-0" onclick="addMessage(),addToCart('./burger.jpg', 'Veg Chawomin', 9.32)">Add to Cart</button>
+                  <h6 class="product-name">Veg Chawomin</h6>
+                  <p class="product-price">$9.32</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                  </div>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart( '../Images/order-images/chawomin-5.jpg', 'Veg Chawomin', 9.32, 5)">Add to Cart</button>
               </div>
           </div>
           <div class="col-md-3 center_class">
-              <div class="product-card container">
+              <div class="product-card container" data-product-id="6">
                   <img src="../Images/order-images/chicken-6.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Full Chicken</h6>
-                  <p>$24.99</p>
-                  <p>Deleivery : + $10</p>
-                  <button class="main-btn py-0" onclick="addMessage(),addToCart('./product2.jpg', 'Full Chicken', 24.99)">Add to Cart</button>
+                  <h6 class="product-name">Full Chicken</h6>
+                  <p class="product-price">$24.99</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">✬</i>
+                  </div>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart('../Images/order-images/chicken-6.jpg', 'Full Chicken', 24.99, 6)">Add to Cart</button>
               </div>
           </div>
           <div class="col-md-3 center_class">
-              <div class="product-card container">
+              <div class="product-card container" data-product-id="7">
                   <img src="../Images/order-images/burger-7.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Chicken Burger</h6>
-                  <p>$9.99</p>
-                  <p>Deleivery : + $10</p>
-                  <button class="main-btn py-0" onclick="addMessage(),addToCart('product3.jpg', 'Chicken Burger', 9.99)">Add to Cart</button>
+                  <h6 class="product-name">Chicken Burger</h6>
+                  <p class="product-price">$9.99</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                  </div>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart( '../Images/order-images/burger-7.jpg','Chicken Burger', 9.99, 7)">Add to Cart</button>
               </div>
           </div>
           <div class="col-md-3 center_class">
-              <div class="product-card container">
+              <div class="product-card container" data-product-id="8">
                   <img src="../Images/order-images/pizza-8.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Gresse Chise Pizza</h6>
-                  <p>$17.00</p>
-                  <p>Deleivery : + $10</p>
-                  <button class="main-btn py-0" onclick="addMessage(),addToCart('product4.jpg', 'Gresse Chise Pizza', 17.00)">Add to Cart</button>
+                  <h6 class="product-name">Gresse Chise Pizza</h6>
+                  <p class="product-price">$17.00</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">✬</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                  </div>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart( '../Images/order-images/pizza-8.jpg', 'Gresse Chise Pizza', 17.00, 8)">Add to Cart</button>
               </div>
           </div>
       </div>
@@ -193,39 +243,63 @@
   <div class="container mt-5">
       <div class="row">
           <div class="col-md-3 center_class">
-              <div class="product-card container">
+              <div class="product-card container" data-product-id="9">
                   <img src="../Images/order-images/momos-9.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Veg Momo</h6>
-                  <p>$5.99</p>
-                  <p>Deleivery : + $10</p>
-                  <button class="main-btn py-0" onclick="addMessage(),addToCart('./burger.jpg', 'Veg Momo', 5.99)">Add to Cart</button>
+                  <h6 class="product-name">Veg Momo</h6>
+                  <p class="product-price">$5.99</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">✬</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                  </div>
+                  <button class="main-btn py-0" onclick="addMessage(),addToCart( '../Images/order-images/momos-9.jpg', 'Veg Momo', 5.99, 9)">Add to Cart</button>
               </div>
           </div>
           <div class="col-md-3 center_class">
-              <div class="product-card container">
+              <div class="product-card container" data-product-id="10">
                   <img src="../Images/order-images/cheesesteak sandwich-13.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Cheesesteak Sandwich</h6>
-                  <p class="padding-stops">$25.00</p>
-                  <p class="padding-stop">Deleivery : + $10</p>
-                  <button class="main-btn py-0 " onclick="addMessage(),addToCart('./product2.jpg', 'Cheesesteak Sandwich', 25.00)">Add to Cart</button>
+                  <h6 class="product-name">Cheesesteak Sandwich</h6>
+                  <p class="padding-stops product-price">$25.00</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">✬</i>
+                    <i class="fa-solid fa-star-sharp">☆</i>
+                  </div>
+                  <button class="main-btn py-0 " onclick="addMessage(),addToCart( '../Images/order-images/cheesesteak sandwich-13.jpg', 'Cheesesteak Sandwich', 25.00, 10)">Add to Cart</button>
               </div>
           </div>
           <div class="col-md-3 center_class">
-              <div class="product-card container md-w-25">
+              <div class="product-card container md-w-25" data-product-id="11">
                   <img src="../Images/order-images/biriyani-10.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Chicken Biriyani</h6>
-                  <p>$20.00</p>
-                  <p>Deleivery : + $10</p>
-                  <button class=" main-btn py-0 " onclick="addMessage(),addToCart('product3.jpg', 'Chicken Biriyani', 20.00)">Add to Cart</button>
+                  <h6 class="product-name">Chicken Biriyani</h6>
+                  <p class="product-price">$20.00</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                  </div>
+                  <button class=" main-btn py-0 " onclick="addMessage(),addToCart( '../Images/order-images/biriyani-10.jpg', 'Chicken Biriyani', 20.00, 11)">Add to Cart</button>
               </div>
           </div>
           <div class="col-md-3 center_class">
-              <div class="product-card container md-w-25">
+              <div class="product-card container md-w-25" data-product-id="12">
                   <img src="../Images/order-images/bacon-burger-11.jpg" alt="Product 4" width="100%" height="100%">
-                  <h6>Bacon Burger</h6>
-                  <p>$10.00</p>
-                  <p>Deleivery : + $10</p>
-                  <button class="main-btn py-0 " onclick="addMessage(),addToCart('product4.jpg', 'Bacon Burger', 10.00)">Add to Cart</button>
+                  <h6 class="product-name">Bacon Burger</h6>
+                  <p class="product-price">$10.00</p>
+                  <div class="star">
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">★</i>
+                    <i class="fa-solid fa-star-sharp">✬</i>
+                  </div>
+                  <button class="main-btn py-0 " onclick="addMessage(),addToCart( '../Images/order-images/bacon-burger-11.jpg', 'Bacon Burger', 10.00, 12)">Add to Cart</button>
             </div>
           </div>
       </div>

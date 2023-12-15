@@ -210,8 +210,21 @@ Responsiveness For Middium Mobile
         display: flex;
         align-items: center;
       }
+
+      
     
      
+}
+
+@media(max-width: 400px){
+    #cart{
+        width: 100%;
+      
+        
+       }
+       .cart-item {
+        font-size: 0.5rem;
+       }
 }
 
 @media(max-width: 334px){
@@ -224,6 +237,12 @@ Responsiveness For Middium Mobile
     .footer a i{
         font-size: 1.1rem;
     }
+
+    #cart{
+        width: 100%;
+        
+        
+       }
 }
 
 /* 

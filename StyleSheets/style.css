@@ -568,11 +568,17 @@ Food Section Styleing
     text-align: center;
     box-shadow: var(--box-shadow);
 }
+
+.center_class:hover{
+    border: 5px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
 #cart {
     position: fixed;
     top: 117px;
     right: 10px;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding: 10px 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -597,19 +603,28 @@ Food Section Styleing
     font-weight: bold;
     margin-top: 10px;
 }
+.image_pro{
+    border: 1px solid #a82c48;
+    border-radius: 25%;
+}
 
 #name_pro{
-    padding: 0rem 1rem;
+    padding: 1rem 1rem;
     font-weight: 700;
 }
 #price_pro{
     padding-right: 4rem;
+    padding: 1rem 1rem;
     font-weight: 700;
 }
 
 .cro_ss{
-    display: flex;
-    justify-content: end;
+    display: inline-flex;
+    position: fixed;
+    right: 2rem;
+    font-size: x-large;
+    
+    
 }
 .cro_ss:hover{
     color: #a82c48;
@@ -620,4 +635,15 @@ Food Section Styleing
 .white-btn{
     margin-left: 0rem;
    
+}
+
+.btn-danger{
+    font-size: 0.5rem;
+    margin: 1rem 0rem;
+}
+.star{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #f98169;
 }
